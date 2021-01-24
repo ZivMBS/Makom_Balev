@@ -1,0 +1,71 @@
+@import "variables";
+
+body {
+    margin: 0;
+    font-family: "MakomBalevHebrew" !important;
+    direction: rtl;
+    font-size: 2em !important;
+}
+
+.header {
+    background: pink;
+
+    .nav-link {
+        color: $secondary-color;
+        background-color: rgb(255, 244, 235);
+    
+        // &:hover {
+        //     color: $primary-color;
+        // }
+    
+        &+.nav-link::before {
+            content: "ו ";
+        }
+    }
+}
+
+.logo-text {
+    font-size: 0.8em;
+    position: relative;
+    top: 1.2em; left: 0.8em;
+    color: $primary-color;
+}
+
+.content {
+    direction: ltr;
+}
+
+.footer {
+    background-color: pink;
+    color: $primary-color;
+    ul {
+        padding: 0;
+        li {
+            font-size: 0.7em;
+            list-style: none;
+        }
+    }
+    .about-info {
+        font-family: 'Arial Black', 'Arial Bold', sans-serif;
+        font-size: 0.7em;
+        direction: ltr;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        span {
+            text-align: center;
+            width: 18em;
+            background: $info-color;
+        }
+        .about-links {
+            margin-top: 0.5em;
+            a {
+                color: $primary-color;
+                text-decoration: none;
+                &+a::before {
+                    content: "ו ";
+                }
+            }
+        }
+    }
+}

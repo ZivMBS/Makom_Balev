@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "MakomBalevHebrew";
+  src: url("../assets/MakomBalevHebrew.otf");
+}
+
+@font-face {
+  font-family: "MakomBalev";
+  src: url("../assets/MakomBalev.otf");
+}
+
+body {
+  margin: 0;
+  font-family: "MakomBalevHebrew" !important;
+  direction: rtl;
+  font-size: 2em !important;
+}
+
+.header {
+  background: pink;
+}
+
+.header .nav-link {
+  color: #b25757;
+  background-color: #fff4eb;
+}
+
+.header .nav-link + .nav-link::before {
+  content: "ו ";
+}
+
+.logo-text {
+  font-size: 0.8em;
+  position: relative;
+  top: 1.2em;
+  left: 0.8em;
+  color: #8a2f2e;
+}
+
+.content {
+  direction: ltr;
+}
+
+.footer {
+  background-color: pink;
+  color: #8a2f2e;
+}
+
+.footer ul {
+  padding: 0;
+}
+
+.footer ul li {
+  font-size: 0.7em;
+  list-style: none;
+}
+
+.footer .about-info {
+  font-family: 'Arial Black', 'Arial Bold', sans-serif;
+  font-size: 0.7em;
+  direction: ltr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .about-info span {
+  text-align: center;
+  width: 18em;
+  background: #ffe8d6;
+}
+
+.footer .about-info .about-links {
+  margin-top: 0.5em;
+}
+
+.footer .about-info .about-links a {
+  color: #8a2f2e;
+  text-decoration: none;
+}
+
+.footer .about-info .about-links a + a::before {
+  content: "ו ";
+}
+/*# sourceMappingURL=home.css.map */
