@@ -1,7 +1,10 @@
-$primary-color: rgb(138, 47, 46);
-$secondary-color: rgb(178, 87, 87);
-$info-color: rgb(255, 232, 214);
-$current-page: rgb(255, 232, 214);
+$text-primary: rgb(178, 87, 87);
+$text-secondary: rgb(138, 47, 46);
+$back-post-text: rgb(255, 244, 235);
+$back-primary: rgb(255, 232, 214);
+// $back-secondary:
+$back-content: rgb(219, 133, 133);
+$back-post: rgb(255, 232, 214);
 
 @font-face {
     font-family: "MakomBalevHebrew";
@@ -11,4 +14,12 @@ $current-page: rgb(255, 232, 214);
 @font-face {
     font-family: "MakomBalev";
     src: url("../assets/MakomBalev.otf");
+}
+
+@mixin about-links {
+    margin-top: 0.5em;
+    a {
+        color: $text-primary;
+        text-decoration: none;
+    }
 }

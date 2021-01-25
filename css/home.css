@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "MakomBalevHebrew";
   src: url("../assets/MakomBalevHebrew.otf");
@@ -11,39 +10,105 @@
 
 body {
   margin: 0;
-  font-family: "MakomBalevHebrew" !important;
+  font-family: "MakomBalevHebrew";
   direction: rtl;
-  font-size: 2em !important;
 }
 
-.header {
-  background: pink;
-}
-
-.header .nav-link {
+.navbar {
+  height: 150px;
+  padding: 8.5px;
   color: #b25757;
-  background-color: #fff4eb;
+  font-size: 2em;
 }
 
-.header .nav-link + .nav-link::before {
-  content: "ו ";
+.navbar .slogan {
+  font-size: 0.7em;
+  width: 10em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-.logo-text {
-  font-size: 0.8em;
-  position: relative;
-  top: 1.2em;
-  left: 0.8em;
+.navbar .nav-link {
+  color: #b25757;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.navbar .nav-link:hover, .navbar .nav-link:active {
   color: #8a2f2e;
+  background-color: #ffe8d6;
+}
+
+.navbar .link-divider {
+  font-size: 1.4em;
+  line-height: 100%;
+  padding: 0 12px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.navbar .about-info {
+  font-family: 'Arial Black', 'Arial Bold', sans-serif;
+  font-size: 0.33em;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  text-align: center;
+}
+
+.navbar .about-info span {
+  background: #ffe8d6;
+}
+
+.navbar .about-info .about-links {
+  margin-top: 0.5em;
+}
+
+.navbar .about-info .about-links a {
+  color: #b25757;
+  text-decoration: none;
 }
 
 .content {
-  direction: ltr;
+  direction: rtl;
+  background: #db8585;
+  color: #8a2f2e;
+  padding: 25px 50px;
+  font-size: 1.5em;
+}
+
+.content .post {
+  background: #ffe8d6;
+}
+
+.content .post .title {
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+
+.content .post p {
+  background-color: #fff4eb;
+  margin: 10px;
+}
+
+.content .post img {
+  margin: 10px 0;
+}
+
+.content .post + .post {
+  margin-top: 50px;
 }
 
 .footer {
-  background-color: pink;
-  color: #8a2f2e;
+  font-size: 1.5em;
+  color: #b25757;
 }
 
 .footer ul {
@@ -57,18 +122,8 @@ body {
 
 .footer .about-info {
   font-family: 'Arial Black', 'Arial Bold', sans-serif;
-  font-size: 0.7em;
   direction: ltr;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  color: #b25757;
 }
 
 .footer .about-info span {
@@ -82,11 +137,7 @@ body {
 }
 
 .footer .about-info .about-links a {
-  color: #8a2f2e;
+  color: #b25757;
   text-decoration: none;
-}
-
-.footer .about-info .about-links a + a::before {
-  content: "ו ";
 }
 /*# sourceMappingURL=home.css.map */

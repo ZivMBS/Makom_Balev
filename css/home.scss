@@ -2,42 +2,88 @@
 
 body {
     margin: 0;
-    font-family: "MakomBalevHebrew" !important;
+    font-family: "MakomBalevHebrew";
     direction: rtl;
-    font-size: 2em !important;
 }
 
-.header {
-    background: pink;
+.navbar {
+    height: 150px;
+    padding: 8.5px;
+    color: $text-primary;
+    font-size: 2em;
+
+    .slogan {
+        font-size: 0.7em;
+        width: 10em;
+        user-select: none;
+    }
 
     .nav-link {
-        color: $secondary-color;
-        background-color: rgb(255, 244, 235);
+        color: $text-primary;
+        padding: 0;
+        user-select: none;
     
-        // &:hover {
-        //     color: $primary-color;
-        // }
-    
-        &+.nav-link::before {
-            content: "ו ";
+        &:hover, &:active {
+            color: $text-secondary;
+            background-color:  rgb(255, 232, 214);
+        }
+    }
+
+    .link-divider {
+        font-size: 1.4em;
+        line-height: 100%;
+        padding: 0 12px;
+        user-select: none;
+    }
+
+    .about-info {
+        font-family: 'Arial Black', 'Arial Bold', sans-serif;
+        font-size: 0.33em;
+        position: absolute;
+        top: 10px; left: 10px;
+        text-align: center;
+        span {
+            background: $back-primary;
+        }
+        .about-links {
+            margin-top: 0.5em;
+            a {
+                color: $text-primary;
+                text-decoration: none;
+            }
         }
     }
 }
 
-.logo-text {
-    font-size: 0.8em;
-    position: relative;
-    top: 1.2em; left: 0.8em;
-    color: $primary-color;
-}
-
 .content {
-    direction: ltr;
+    direction: rtl;
+    background: $back-content;
+    color: $text-secondary;
+    padding: 25px 50px;
+    font-size: 1.5em;
+    .post {
+        background: $back-post;
+        .title {
+            text-decoration: underline;
+            font-size: 1.5em;
+        }
+        p {
+            background-color: $back-post-text;
+            margin: 10px;
+        }
+        img {
+            margin: 10px 0;
+        }
+    }
+
+    .post + .post {
+        margin-top: 50px;
+    }
 }
 
 .footer {
-    background-color: pink;
-    color: $primary-color;
+    font-size: 1.5em;
+    color: $text-primary;
     ul {
         padding: 0;
         li {
@@ -45,26 +91,21 @@ body {
             list-style: none;
         }
     }
+
     .about-info {
         font-family: 'Arial Black', 'Arial Bold', sans-serif;
-        font-size: 0.7em;
         direction: ltr;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        color: $text-primary;
         span {
             text-align: center;
             width: 18em;
-            background: $info-color;
+            background: $back-primary;
         }
         .about-links {
             margin-top: 0.5em;
             a {
-                color: $primary-color;
+                color: $text-primary;
                 text-decoration: none;
-                &+a::before {
-                    content: "ו ";
-                }
             }
         }
     }
